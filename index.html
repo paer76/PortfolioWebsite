@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Antoine Evray · Développeur Full-Stack &amp; Ingénieur IA</title>
+<meta name="description" content="Antoine Evray, développeur full-stack et ingénieur IA à Genève. Expert C#, React, Three.js et solutions IA locales et cloud." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230a0a0d%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22%230a84ff%22 font-family=%22-apple-system,Helvetica,Arial%22>A</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">AE<span class="dot">.</span></a>
+    <nav class="nav-links">
+      <a href="#apropos">À propos</a>
+      <a href="#experiences">Expériences</a>
+      <a href="#projets">Projets</a>
+      <a href="#competences">Compétences</a>
+      <a href="#contact">Contact</a>
+      <a href="personal.html" class="nav-link-personal">Perso</a>
+    </nav>
+    <a href="assets/cv/CV_Antoine_Evray.pdf" download class="nav-cta">Télécharger le CV</a>
+    <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#apropos">À propos</a>
+    <a href="#experiences">Expériences</a>
+    <a href="#projets">Projets</a>
+    <a href="#competences">Compétences</a>
+    <a href="#contact">Contact</a>
+    <a href="personal.html" class="nav-link-personal">Perso ↗</a>
+    <a href="assets/cv/CV_Antoine_Evray.pdf" download class="nav-cta-mobile">Télécharger le CV</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-canvas-wrap">
+      <canvas id="heroCanvas"></canvas>
+    </div>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-kicker">Genève · Suisse</p>
+      <h1 class="hero-title">
+        <span class="hero-title-line">Antoine Evray</span>
+        <span class="hero-title-line hero-title-accent">Développeur Full-Stack<br/>&amp; Ingénieur IA</span>
+      </h1>
+      <p class="hero-sub">
+        7 ans d'expérience à concevoir des architectures robustes en C#, React et Three.js,
+        et à intégrer l'IA au cœur de produits réels, du prototype au déploiement.
+      </p>
+      <div class="hero-actions">
+        <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn btn-ghost">Me contacter</a>
+      </div>
+    </div>
+
+    <div class="hero-drag-hint" id="dragHint">
+      <span class="hero-drag-hint-icon">↔</span> Glissez pour faire tourner
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span></span>
+      <p>Défiler</p>
+    </div>
+  </section>
+
+  <!-- A PROPOS -->
+  <section class="section" id="apropos">
+    <div class="container">
+      <p class="section-kicker">01 · Profil</p>
+      <h2 class="section-title">Ingénieur orienté performance,<br/>et maintenabilité.</h2>
+      <div class="about-grid">
+        <div class="about-text glass">
+          <p>
+            Ingénieur full-stack avec 7 ans d'expérience, expert C# / React et optimisation système.
+            Je conçois des solutions robustes pour des architectures complexes, avec une attention
+            constante à la performance et à la maintenabilité du code.
+          </p>
+          <p>
+            J'utilise l'IA au quotidien, avec des modèles locaux et cloud, pour accélérer le
+            développement et enrichir les produits que je construis. Approche agile, livraison
+            continue, forte valeur ajoutée.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat glass">
+            <span class="stat-number" data-count="7">0</span>
+            <span class="stat-label">ans d'expérience</span>
+          </div>
+          <div class="stat glass">
+            <span class="stat-number" data-count="6">0</span>
+            <span class="stat-label">entreprises &amp; missions</span>
+          </div>
+          <div class="stat glass">
+            <span class="stat-number" data-count="200">0</span>
+            <span class="stat-label">serveurs supervisés</span>
+          </div>
+          <div class="stat glass">
+            <span class="stat-number" data-count="94">0</span>
+            <span class="stat-label">% gain de perf. (Azqore)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES -->
+  <section class="section" id="experiences">
+    <div class="container">
+      <p class="section-kicker">02 · Parcours</p>
+      <h2 class="section-title">Expériences professionnelles</h2>
+
+      <div class="timeline">
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <div class="timeline-head">
+              <h3>Développeur Full-Stack &amp; Ingénieur IA</h3>
+              <span class="timeline-date">Depuis juil. 2026</span>
+            </div>
+            <p class="timeline-org">Boxygène (Club Sportif), Genève</p>
+            <p class="timeline-desc">
+              Développement full-stack d'une application de coaching de boxe interactive :
+              interface de séance en temps réel (React, TypeScript, Vite), API REST (Node.js,
+              Express, Prisma/SQLite), authentification Google OAuth2, et intégration de
+              visualisations 3D (Three.js) pour enrichir l'expérience utilisateur. Assisté par
+              l'IA (Claude Code).
+            </p>
+            <div class="tag-row">
+              <span class="tag">React</span><span class="tag">TypeScript</span>
+              <span class="tag">Vite</span><span class="tag">Node.js</span>
+              <span class="tag">Prisma</span><span class="tag">Three.js</span>
+              <span class="tag">OAuth2</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <div class="timeline-head">
+              <h3>Développeur Full-Stack &amp; Ingénieur IA</h3>
+              <span class="timeline-date">Depuis mars 2026</span>
+            </div>
+            <p class="timeline-org">Geneva Business News (Journalisme), Genève</p>
+            <p class="timeline-desc">
+              Développement d'« El Patator », application web de compression et conversion vidéo
+              à interface 3D animée (Three.js, Node.js, Docker, FFmpeg). Support de proximité
+              auprès de 80 collaborateurs et animation de deux formations internes (prise en main
+              de Claude Code, sensibilisation à la cybersécurité). Administration de postes Linux, avec
+              optimisation de KDE Plasma sous Wayland pour sessions RDP Windows multi-écran,
+              et optimisation d'un modèle d'IA open-weight local (Google Gemma) pour un chatbot
+              d'assistance technique.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Three.js</span><span class="tag">Node.js</span>
+              <span class="tag">Docker</span><span class="tag">FFmpeg</span>
+              <span class="tag">Linux</span><span class="tag">Gemma</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <div class="timeline-head">
+              <h3>Ingénieur Logiciel</h3>
+              <span class="timeline-date">Avr. 2024 à oct. 2024</span>
+            </div>
+            <p class="timeline-org">Square Four S.A. (Commerce), Genève</p>
+            <p class="timeline-desc">
+              Migration VB vers C# divisant par deux les temps de chargement (+50% de performance).
+              Développement de fonctionnalités clés et rédaction de la documentation technique
+              associée.
+            </p>
+            <div class="tag-row">
+              <span class="tag">C#</span><span class="tag">Visual Basic</span>
+              <span class="tag">Migration</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <div class="timeline-head">
+              <h3>Ingénieur Concepteur Développeur Logiciel</h3>
+              <span class="timeline-date">Oct. 2022 à juil. 2023</span>
+            </div>
+            <p class="timeline-org">SQLI (Consulting), Genève</p>
+            <p class="timeline-desc">
+              Conception de fonctionnalités complexes (React / C#) et optimisation des rituels
+              Scrum pour accroître la vélocité de l'équipe. Pilotage de la TMA de deux applications
+              critiques et gestion d'écosystèmes SharePoint, garantissant une haute disponibilité
+              logicielle. Prototypage via Vlingo Xoom, automatisant le socle technique pour
+              recentrer l'effort R&amp;D sur les règles métier.
+            </p>
+            <div class="tag-row">
+              <span class="tag">React</span><span class="tag">C#</span>
+              <span class="tag">Scrum</span><span class="tag">SharePoint</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <div class="timeline-head">
+              <h3>Expert en Stabilisation</h3>
+              <span class="timeline-date">Avr. 2021 à sept. 2022</span>
+            </div>
+            <p class="timeline-org">Azqore S.A. (Banque), Genève</p>
+            <p class="timeline-desc">
+              Optimisation du système bancaire S2I, réduction du temps de traitement de 48h à 3h
+              (gain de 94%). Réécriture de modules IDEAL AS/400 vers COBOL Micro Focus.
+              Harmonisation du parc applicatif COBOL et rédaction technique.
+            </p>
+            <div class="tag-row">
+              <span class="tag">COBOL</span><span class="tag">AS/400</span>
+              <span class="tag">Optimisation</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <div class="timeline-head">
+              <h3>Développeur Logiciel</h3>
+              <span class="timeline-date">Jan. 2019 à juil. 2019</span>
+            </div>
+            <p class="timeline-org">Sopra-Steria (Consulting), Rouen, France</p>
+            <p class="timeline-desc">
+              Optimisation d'applications critiques en C++ pour l'Assurance Maladie. Support
+              opérationnel et monitoring d'un parc de 200 serveurs. Création d'un système interne
+              de gestion de tickets pour optimiser le workflow de résolution d'incidents.
+            </p>
+            <div class="tag-row">
+              <span class="tag">C++</span><span class="tag">Monitoring</span>
+              <span class="tag">Support</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section class="section" id="projets">
+    <div class="container">
+      <p class="section-kicker">03 · Réalisations</p>
+      <h2 class="section-title">Projets sélectionnés</h2>
+
+      <div class="projects-grid">
+        <article class="project-card glass">
+          <div class="project-media">
+            <video class="project-video" src="assets/videos/clip2_sweep.mp4" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>Coaching de boxe interactif</h3>
+            <p>Interface de séance temps réel, API REST et visualisations 3D pour une expérience d'entraînement immersive.</p>
+            <div class="tag-row">
+              <span class="tag">React</span><span class="tag">Three.js</span><span class="tag">Prisma</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass">
+          <div class="project-media">
+            <video class="project-video" src="assets/videos/clip3_rings.mp4" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>El Patator</h3>
+            <p>Application web de compression et conversion vidéo à interface 3D animée, conteneurisée avec Docker.</p>
+            <div class="tag-row">
+              <span class="tag">Three.js</span><span class="tag">FFmpeg</span><span class="tag">Docker</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass">
+          <div class="project-media">
+            <video class="project-video" src="assets/videos/clip1_ondes.mp4" autoplay muted loop playsinline></video>
+          </div>
+          <div class="project-body">
+            <h3>Chatbot IA local</h3>
+            <p>Optimisation d'un modèle open-weight (Google Gemma) auto-hébergé pour un chatbot d'assistance technique.</p>
+            <div class="tag-row">
+              <span class="tag">Gemma</span><span class="tag">Linux</span><span class="tag">IA locale</span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="project-note">
+        Aperçus provisoires, remplacés prochainement par des démonstrations réelles de chaque projet.
+      </p>
+    </div>
+  </section>
+
+  <!-- COMPETENCES -->
+  <section class="section" id="competences">
+    <div class="container">
+      <p class="section-kicker">04 · Compétences</p>
+      <h2 class="section-title">Une boîte à outils complète</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card glass">
+          <h3>Langages</h3>
+          <div class="tag-row">
+            <span class="tag">C#</span><span class="tag">C++</span><span class="tag">C</span>
+            <span class="tag">SQL</span><span class="tag">Visual Basic</span><span class="tag">COBOL</span>
+          </div>
+        </div>
+        <div class="skill-card glass">
+          <h3>Front-end</h3>
+          <div class="tag-row">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">AngularJS</span>
+          </div>
+        </div>
+        <div class="skill-card glass">
+          <h3>DevOps &amp; outils</h3>
+          <div class="tag-row">
+            <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Jenkins</span>
+            <span class="tag">Git</span><span class="tag">Jira</span><span class="tag">SonarQube</span>
+            <span class="tag">Coolify</span><span class="tag">SharePoint</span>
+          </div>
+        </div>
+        <div class="skill-card glass">
+          <h3>Intelligence Artificielle</h3>
+          <div class="tag-row">
+            <span class="tag">Claude Code</span><span class="tag">ChatGPT</span><span class="tag">Mistral</span>
+            <span class="tag">Llama 3</span><span class="tag">Gemma</span>
+          </div>
+        </div>
+        <div class="skill-card glass">
+          <h3>Méthodes</h3>
+          <div class="tag-row">
+            <span class="tag">Scrum</span><span class="tag">CI/CD</span><span class="tag">POO</span>
+            <span class="tag">Tests d'intégration</span><span class="tag">Full-Stack</span>
+          </div>
+        </div>
+        <div class="skill-card glass">
+          <h3>Langues</h3>
+          <div class="lang-row">
+            <div class="lang-item">
+              <span>Français</span>
+              <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+            </div>
+            <div class="lang-item">
+              <span>Anglais (C1)</span>
+              <div class="lang-bar"><div class="lang-fill" style="width:85%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="formations">
+        <h3 class="formations-title">Diplômes &amp; formations</h3>
+        <ul class="formations-list">
+          <li><span class="f-name">Certifications IA Anthropic</span><span class="f-org">Anthropic, depuis avr. 2026</span></li>
+          <li><span class="f-name">Formation ASP.NET Core MVC</span><span class="f-org">ITTA, Genève, fév. 2026</span></li>
+          <li><span class="f-name">Formation ReactJS</span><span class="f-org">ITTA, Genève, nov. 2025</span></li>
+          <li><span class="f-name">Formation Microsoft DevOps (AZ-400)</span><span class="f-org">ITTA, Genève, mars 2024</span></li>
+          <li><span class="f-name">Certification ISTQB Foundation</span><span class="f-org">AJC Formations, Brest, déc. 2019 à mars 2020</span></li>
+          <li><span class="f-name">Master spécialité Informatique</span><span class="f-org">CESI, Rouen, sept. 2014 à juil. 2019</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-contact" id="contact">
+    <div class="container">
+      <div class="contact-box glass">
+        <p class="section-kicker">05 · Contact</p>
+        <h2 class="section-title">Discutons de votre projet.</h2>
+        <p class="contact-sub">Disponible pour des missions freelance ou de nouvelles opportunités à Genève et à distance.</p>
+        <div class="contact-links">
+          <a href="mailto:antoine.evray@viacesi.fr" class="contact-link">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">antoine.evray@viacesi.fr</span>
+          </a>
+          <a href="tel:+41782186533" class="contact-link">
+            <span class="contact-label">Téléphone</span>
+            <span class="contact-value">+41 78 218 65 33</span>
+          </a>
+          <div class="contact-link contact-link-static">
+            <span class="contact-label">Localisation</span>
+            <span class="contact-value">Genève, Suisse</span>
+          </div>
+        </div>
+        <a href="assets/cv/CV_Antoine_Evray.pdf" download class="btn btn-primary btn-lg">Télécharger mon CV</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2026 Antoine Evray</span>
+    <span>Genève, Suisse</span>
+  </div>
+</footer>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/three.module.js"
+  }
+}
+</script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

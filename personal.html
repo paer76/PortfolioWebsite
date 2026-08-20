@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Antoine Evray · Projets personnels</title>
+<meta name="description" content="Projets personnels d'Antoine Evray : expérimentations musicales assistées par IA et prototypes de jeux vidéo." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230a0a0d%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22%23bf5af2%22 font-family=%22-apple-system,Helvetica,Arial%22>A</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="theme-personal">
+
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="personal.html" class="nav-logo">AE<span class="dot">.</span></a>
+    <nav class="nav-links">
+      <a href="#musique">Musique</a>
+      <a href="#jeux">Jeux vidéo</a>
+    </nav>
+    <a href="index.html" class="nav-cta">← Portfolio</a>
+    <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#musique">Musique</a>
+    <a href="#jeux">Jeux vidéo</a>
+    <a href="index.html" class="nav-cta-mobile">← Retour au portfolio</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- INTRO -->
+  <section class="personal-hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="container personal-hero-content">
+      <p class="hero-kicker">Espace perso</p>
+      <h1 class="personal-hero-title">Ce que je fais<br/>quand je ne code pas <span class="accent-underline">pour un client</span>.</h1>
+      <p class="hero-sub personal-hero-sub">
+        Un laboratoire à part, séparé du reste du portfolio : mes expérimentations musicales
+        assistées par IA, et mes prototypes de jeux vidéo faits pour le plaisir.
+      </p>
+    </div>
+  </section>
+
+  <!-- MUSIQUE -->
+  <section class="section" id="musique">
+    <div class="container">
+      <p class="section-kicker">Studio · Musique</p>
+      <h2 class="section-title">Compositions assistées par IA</h2>
+      <p class="section-intro">
+        J'utilise l'IA comme un instrument de plus dans mon home studio, du prompt jusqu'au
+        morceau fini. Voici ma première tentative sérieuse.
+      </p>
+
+      <div class="album-hero glass reveal">
+        <div class="album-art">
+          <img src="assets/img/music/album-cover.jpg" alt="Pochette de Giant in the Room" />
+          <button class="album-play-btn" id="playBtnMain" aria-label="Lecture">
+            <svg viewBox="0 0 24 24" class="icon-play"><path d="M8 5v14l11-7z"/></svg>
+            <svg viewBox="0 0 24 24" class="icon-pause icon-hidden"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+          </button>
+        </div>
+        <div class="album-info">
+          <p class="album-eyebrow">Titre unique</p>
+          <h3 class="album-title">Giant in the Room</h3>
+          <p class="album-artist">Antoine Evray — expérimentation IA</p>
+          <p class="album-desc">
+            Un morceau composé avec l'aide de l'IA générative, pensé comme une exploration
+            sonore atmosphérique. Encore expérimental, mais c'est le début d'une nouvelle
+            corde à mon arc créatif.
+          </p>
+
+          <div class="player-controls">
+            <button id="playBtn" class="player-btn player-btn-play" aria-label="Lecture / Pause">
+              <svg viewBox="0 0 24 24" class="icon-play"><path d="M8 5v14l11-7z"/></svg>
+              <svg viewBox="0 0 24 24" class="icon-pause icon-hidden"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+            </button>
+            <span class="player-time" id="timeCurrent">0:00</span>
+            <input type="range" id="seekBar" class="seek-bar" min="0" max="1000" value="0" aria-label="Progression" />
+            <span class="player-time" id="timeDuration">4:30</span>
+            <div class="vol-group">
+              <svg viewBox="0 0 24 24" class="icon-vol"><path d="M3 10v4h4l5 5V5L7 10H3zM16.5 12a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+              <input type="range" id="volBar" class="vol-bar" min="0" max="100" value="80" aria-label="Volume" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="track-list glass reveal">
+        <div class="track-row" id="trackRow0">
+          <span class="track-num">1</span>
+          <img class="track-thumb" src="assets/img/music/album-cover.jpg" alt="" />
+          <div class="track-meta">
+            <span class="track-title">Giant in the Room</span>
+            <span class="track-artist">Antoine Evray</span>
+          </div>
+          <span class="track-duration">4:30</span>
+          <button class="track-play" id="trackPlayBtn0" aria-label="Lecture">
+            <svg viewBox="0 0 24 24" class="icon-play"><path d="M8 5v14l11-7z"/></svg>
+            <svg viewBox="0 0 24 24" class="icon-pause icon-hidden"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+          </button>
+        </div>
+        <p class="track-list-note">D'autres titres arriveront ici au fil de mes expérimentations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JEUX -->
+  <section class="section" id="jeux">
+    <div class="container">
+      <p class="section-kicker">Studio · Jeux vidéo</p>
+      <h2 class="section-title">Prototypes de jeux</h2>
+      <p class="section-intro">
+        Deux projets perso où j'explore le game design et la 3D temps réel, en dehors de mon
+        travail salarié. Cliquez sur une jaquette pour en savoir plus.
+      </p>
+
+      <div class="games-grid">
+        <button class="game-card reveal" data-game="carrenoir">
+          <img src="assets/img/games/carre-noir-cover.jpg" alt="Jaquette de Carré Noir" class="game-cover" />
+          <div class="game-card-overlay">
+            <h3 class="game-card-title">Carré Noir</h3>
+            <span class="game-card-tag">Action monde ouvert · Genève</span>
+          </div>
+          <span class="game-card-pegi">18</span>
+        </button>
+
+        <button class="game-card reveal" data-game="horror">
+          <img src="assets/img/games/horror-game-cover.jpg" alt="Jaquette du jeu d'horreur sans nom" class="game-cover" />
+          <div class="game-card-overlay">
+            <h3 class="game-card-title">Sans nom</h3>
+            <span class="game-card-tag">Horreur · À venir</span>
+          </div>
+          <span class="game-card-pegi">18</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2026 Antoine Evray</span>
+    <span>Projets personnels</span>
+  </div>
+</footer>
+
+<audio id="audioEl" src="assets/audio/GiantInTheRoom.mp3" preload="metadata"></audio>
+
+<!-- persistent now-playing bar (Apple Music style) -->
+<div class="now-playing-bar" id="nowPlayingBar" aria-hidden="true">
+  <div class="np-progress"><div class="np-progress-fill" id="npProgressFill"></div></div>
+  <div class="np-inner">
+    <img class="np-cover" src="assets/img/music/album-cover.jpg" alt="" />
+    <div class="np-meta">
+      <span class="np-title">Giant in the Room</span>
+      <span class="np-artist">Antoine Evray</span>
+    </div>
+    <button id="npPlayBtn" class="np-play-btn" aria-label="Lecture / Pause">
+      <svg viewBox="0 0 24 24" class="icon-play"><path d="M8 5v14l11-7z"/></svg>
+      <svg viewBox="0 0 24 24" class="icon-pause icon-hidden"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- game modal -->
+<div class="game-modal-backdrop" id="gameModalBackdrop">
+  <div class="game-modal glass" id="gameModal" role="dialog" aria-modal="true" aria-labelledby="modalLogo">
+    <button class="game-modal-close" id="gameModalClose" aria-label="Fermer">✕</button>
+    <div class="game-modal-hero" id="modalHero">
+      <h3 class="game-modal-logo" id="modalLogo">CARRÉ NOIR</h3>
+    </div>
+    <div class="game-modal-body">
+      <p class="platform-label">Plateformes</p>
+      <div class="platform-row" id="modalPlatforms"></div>
+      <div class="pegi-row">
+        <div class="pegi-badge">
+          <span class="pegi-number">18</span>
+          <span class="pegi-label">PEGI</span>
+        </div>
+        <span class="pegi-note">Contenu recommandé à un public averti.</span>
+      </div>
+      <p class="game-modal-blurb" id="modalBlurb"></p>
+      <div class="tag-row" id="modalTags"></div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="js/personal.js"></script>
+</body>
+</html>
